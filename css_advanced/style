@@ -1,0 +1,214 @@
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4, p {
+  margin: 0;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #F2F2F2;
+}
+
+header img {
+  width: 150px;
+}
+
+nav {
+  display: flex;
+  list-style: none;
+}
+
+nav a {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #E0E0E0;
+}
+
+/* Main Section Styles */
+.main {
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.instructors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.instructor {
+  width: 22%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.instructor img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Additional Styles (Modify as needed) */
+.section {
+  padding: 2rem;
+}
+.Tutorial {
+  background-color: #F2F2F2;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  margin: 2rem auto;
+  width: 80%; /* Adjust width as needed */
+}
+
+.Tutorial p:first-child { /* Target the first paragraph */
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.Tutorial h2 {
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.column {
+  width: 23%; /* Adjust width based on number of columns */
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.column h3 {
+  margin-bottom: 0.5rem;
+}
+
+.column p {
+  margin-bottom: 0.3rem;
+}
+
+.membership {
+  background-color: #F2F2F2;
+  padding: 2rem;
+  text-align: center;
+}
+
+.membership h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.membership p:first-child {
+  margin-bottom: 2rem;
+}
+
+.membership img {
+  width: 80%; /* Adjust width as needed */
+  margin-bottom: 1rem;
+}
+
+.membership p:last-child {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Content Section Styles */
+.content {
+  padding: 2rem;
+}
+
+.content article {
+  background-color: #FFF;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.content h2 {
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  margin-bottom: 0.5rem;
+}
+
+.content img {
+  width: 50%; /* Adjust width as needed */
+  margin-bottom: 0.5rem;
+}
+
+.content a {
+  display: block;
+  text-align: center;
+  background-color: #007bff;
+  color: #FFF;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Banner Section Styles */
+.banner {
+  background-color: #00C7CF; /* Light blue color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  height: 100px; /* Adjust height as needed */
+}
+
+.banner img {
+  width: 200px; /* Adjust width as needed */
+  height: auto;
+}
+
+.social {
+  display: flex;
+}
+
+.social a {
+  color: #FFF; /* White font color */
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+.social a:hover {
+  text-decoration: none;
+  opacity: 0.8; /* Add a slight opacity change on hover */
+}
