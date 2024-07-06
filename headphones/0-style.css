@@ -1,0 +1,316 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --color-text-white: #FFFFFF;
+    --color-red: #FF6565;
+    --color-text-black: #071629;
+    --color-background-white: #F2F2F2
+}
+
+body {
+    font-family: source sans pro, sans-serif;
+    background-image: url('./Assets/headphones_hero_1.jpg');
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font: 46px;
+    color: var(--color-text-white);
+    font-weight: bold;
+}
+
+h3 {
+    font: 18px;
+    color: var(--color-text-black);
+    font-weight: semibold;
+}
+
+h4 {
+    font: 16px;
+    color: var(--color-text-white);
+    font-weight: bold;
+}
+
+h5 {
+    font: 14px;
+}
+
+h6 {
+    font: 12px;
+    color: var(--color-text-white);
+}
+
+p {
+    font: 16px;
+}
+
+a {
+    font: 12px;
+    color: var(--color-text-white);
+    font-weight: bold;
+}
+
+a:hover,
+a:active {
+    color: var(--color-red);
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-red);
+    color: var(--color-text-white);
+    padding: 13px 31px;
+    border: 1px solid transparent;
+    font: 14px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+.btn:hover,
+.btn:active {
+    opacity: 0.9;
+}
+
+header {
+    position: relative;
+    width: 100%;
+}
+
+.menu {
+    z-index: 1;
+}
+
+.BtnMenu {
+    position: relative;
+    width: 20px;
+    height: 3px;
+    background-color: var(--color-text-white);
+    border-radius: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.BtnMenu::after,
+.BtnMenu::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 0;
+    background: var(--color-text-white);
+    border-radius: 10px;
+}
+
+.BtnMenu::before {
+    top: -8px;
+    width: 25px;
+}
+
+.BtnMenu::after {
+    top: 8px;
+    width: 25px;
+}
+
+.toggle-menu {
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.BtnMenu,
+.toggle-menu {
+    display: none;
+}
+
+.navigate input:checked~.BtnMenu {
+    background: transparent;
+}
+
+.navigate input:checked~.BtnMenu::before {
+    top: 0;
+    transform: rotate(-45deg);
+    width: 25px;
+}
+
+.navigate input:checked~.BtnMenu::after {
+    top: 0;
+    transform: rotate(45deg);
+    width: 25px;
+}
+
+.navigate input:checked~.menu {
+    left: 0;
+}
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 29px auto;
+    height: 62px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu li {
+    padding-right: 41px;
+}
+
+.menu li:nth-child(3) {
+    padding-right: 0;
+}
+
+nav .logo {
+    width: 161px;
+    height: 32px;
+}
+
+.main-part {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 637px;
+    height: 313px;
+    margin: 312px 187px 120px 181px;
+
+}
+
+.main-part h1 {
+    color: var(--color-text-white);
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.main-part p {
+    color: var(--color-text-white);
+}
+
+.main-part button {
+    margin: 40px 220px 65px;
+}
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        margin: 29px 69px 0 66px;
+
+    }
+
+    .main-part {
+        margin: 312px 65px 115px 66px;
+    }
+
+    body {
+        background-position: center;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+
+    body {
+        height: 850px;
+    }
+
+    .BtnMenu,
+    .toggle-menu {
+        display: block;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 70px;
+        left: -300px;
+        background: transparent;
+        width: 300px;
+        height: 300px;
+        margin: 10px auto 30px;
+        transition: 0.3s ease-out;
+
+    }
+
+    .menu li {
+        padding: 20px 100px;
+    }
+
+    .menu li:nth-child(3) {
+        padding-right: 100px;
+    }
+
+    nav {
+        flex-direction: row-reverse;
+        margin-left: 21px;
+    }
+
+    body {
+        background-position: center;
+    }
+
+    .main-part {
+        max-width: 357px;
+        height: 436px;
+        margin: 266px auto 106px;
+    }
+
+    .main-part h4 {
+        padding: 0 50px;
+    }
+
+    .main-part p {
+        padding: 10px 10px;
+    }
+
+    nav .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-part button {
+        margin: 40px 70px 65px 70px;
+    }
+
+
+}
