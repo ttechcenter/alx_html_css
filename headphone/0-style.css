@@ -25,7 +25,7 @@
 
 body {
     font-family: source sans pro, sans-serif;
-    background-image: url('./Assets/headphones_hero_1.jpg');
+    background-image: url('./images/headphones_hero_1.jpg');
     height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -222,7 +222,7 @@ nav .logo {
     text-align: center;
     width: 637px;
     height: 313px;
-    margin: 312px 187px 120px 181px;
+    margin: 312px auto 120px;
 
 }
 
@@ -304,7 +304,7 @@ nav .logo {
     }
 
     .main-part {
-        max-width: 357px;
+        width: 357px;
         height: 436px;
         margin: 266px auto 106px;
     }
@@ -326,6 +326,294 @@ nav .logo {
     .main-part button {
         margin: 40px 70px 65px 70px;
     }
+}
 
+
+
+
+/*---------------- Task 2 - WHAT WE DO Section------------------- */
+
+/*---------------- part-1 what we do styles------------------- */
+
+.what-we-do {
+    text-align: center;
+    padding: 110px 0;
+    color: var(--color-text-black);
+    height: 700h;
+}
+
+.part-1-what-we-do {
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+.part-1-what-we-do h1 {
+    padding-bottom: 40px;
+
+}
+
+.part-1-what-we-do p {
+    padding-bottom: 97px;
+}
+
+.part-2-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 193;
+    gap: 55px;
+}
+
+
+.animated-items .icon:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.icon {
+    max-width: 207px;
+}
+
+.icon h3 {
+    padding: 25px 0 13px;
+}
+
+.icon h5 {
+    line-height: 1.4rem;
+    opacity: 70%;
+}
+
+/*----------------Media queries for tablet styles of What we do------------------- */
+
+@media screen and (max-width: 768px) {
+
+    .part-2-icons {
+        width: 70%;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+}
+
+/*----------------Media queries for Mobile phone styles of What we do------------------- */
+
+@media screen and (max-width: 480px) {
+
+    .part-1-what-we-do p {
+        padding: 0 25px 110px;
+    }
+
+}
+
+
+/*---------------- Task 3 - Our Results Section------------------- */
+
+/*---------------- part-3-dark styles------------------- */
+
+.part-3-dark {
+    text-align: center;
+    padding: 141px 0 80px 0;
+    color: var(--color-text-white);
+    background-image: url('./images/headphones_hero_2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.part-3-dark p {
+    padding: 40px 0 56px 0;
+    max-width: 637px;
+    margin: 0 auto;
+}
+
+.dots {
+    display: flex;
+    gap: 70px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.animated-dots .dot:hover {
+    animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dot-image {
+    max-width: 200px;
+    height: 190px;
+}
+
+.dot {
+    position: relative;
+}
+
+.dot h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.dot h5 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 12px;
+}
+
+/*----------------Media queries for tablet styles of Our Results------------------- */
+
+@media screen and (max-width: 768px) {
+
+    .dots {
+        width: 70%;
+        flex-flow: row wrap;
+        margin: 0 auto;
+    }
+}
+
+/*----------------Media queries for Mobile phone styles of Our Results------------------- */
+
+@media screen and (max-width: 480px) {
+
+    .part-3-dark p {
+        padding-left: 34px;
+        padding-right: 34px;
+    }
+
+    .dots {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+/*---------------- Task 4 - Contact Us Section------------------- */
+
+/*---------------- part-4-contact-us styles------------------- */
+
+.part-4-contact-us {
+    padding: 110px 0 130px;
+}
+
+.part-4-contact-us h1 {
+    text-align: center;
+}
+
+.part-4-contact-us form {
+    max-width: 335px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border-top: 1px solid #979595;
+    font-size: 16px;
+}
+
+.part-4-contact-us .btn {
+    margin: 0 auto;
+}
+
+
+/*----------------Media queries for tablet and Mobile phone styles of contact us
+                    is same with desktop style since I used margin: 0 auto------------------- */
+
+
+
+
+/*---------------- Task 5 - Footer Section------------------- */
+
+/*----------------Footer styles------------------- */
+
+footer {
+    background-color: var(--color-text-black);
+}
+
+.footer-links .logo {
+    width: 161px;
+    height: 32px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 91px 200px 71px;
+}
+
+.social-icons {
+    color: var(--color-text-white);
+    display: flex;
+    padding-right: 20px;
+}
+
+.social-icons i {
+    width: 30px;
+    height: 30px;
+}
+
+footer h6 {
+    text-align: center;
+    opacity: 0.4;
+    padding-bottom: 40px;
+}
+
+/*----------------Media queries for tablet styles of footer------------------- */
+
+@media screen and (max-width: 768px) {
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 91px 56px 60px;
+    }
+
+}
+
+/*----------------Media queries for Mobile phone styles of footer------------------- */
+
+@media screen and (max-width: 480px) {
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        padding: 48px 0 30px;
+        margin: 0 auto;
+    }
+
+    .footer-links .social-icons {
+        padding-top: 48px;
+        margin: 0 auto;
+        padding-right: 0;
+
+    }
 
 }
