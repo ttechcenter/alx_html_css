@@ -25,7 +25,7 @@
 
 body {
     font-family: source sans pro, sans-serif;
-    background-image: url('./Assets/headphones_hero_1.jpg');
+    background-image: url('./images/headphones_hero_1.jpg');
     height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,6 +364,23 @@ nav .logo {
     gap: 55px;
 }
 
+
+.animated-items .icon:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 .icon {
     max-width: 207px;
 }
@@ -407,7 +424,7 @@ nav .logo {
     text-align: center;
     padding: 141px 0 80px 0;
     color: var(--color-text-white);
-    background-image: url('./Assets/headphones_hero_2.jpg');
+    background-image: url('./images/headphones_hero_2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -424,6 +441,20 @@ nav .logo {
     gap: 70px;
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.animated-dots .dot:hover {
+    animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .dot-image {
@@ -476,4 +507,113 @@ nav .logo {
         flex-direction: column;
         margin: 0 auto;
     }
+
+}
+
+
+
+/*---------------- Task 4 - Contact Us Section------------------- */
+
+/*---------------- part-4-contact-us styles------------------- */
+
+.part-4-contact-us {
+    padding: 110px 0 130px;
+}
+
+.part-4-contact-us h1 {
+    text-align: center;
+}
+
+.part-4-contact-us form {
+    max-width: 335px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border-top: 1px solid #979595;
+    font-size: 16px;
+}
+
+.part-4-contact-us .btn {
+    margin: 0 auto;
+}
+
+
+/*----------------Media queries for tablet and Mobile phone styles of contact us
+                    is same with desktop style since I used margin: 0 auto------------------- */
+
+
+
+
+/*---------------- Task 5 - Footer Section------------------- */
+
+/*----------------Footer styles------------------- */
+
+footer {
+    background-color: var(--color-text-black);
+}
+
+.footer-links .logo {
+    width: 161px;
+    height: 32px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 91px 200px 71px;
+}
+
+.social-icons {
+    color: var(--color-text-white);
+    display: flex;
+    padding-right: 20px;
+}
+
+.social-icons i {
+    width: 30px;
+    height: 30px;
+}
+
+footer h6 {
+    text-align: center;
+    opacity: 0.4;
+    padding-bottom: 40px;
+}
+
+/*----------------Media queries for tablet styles of footer------------------- */
+
+@media screen and (max-width: 768px) {
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 91px 56px 60px;
+    }
+
+}
+
+/*----------------Media queries for Mobile phone styles of footer------------------- */
+
+@media screen and (max-width: 480px) {
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        padding: 48px 0 30px;
+        margin: 0 auto;
+    }
+
+    .footer-links .social-icons {
+        padding-top: 48px;
+        margin: 0 auto;
+        padding-right: 0;
+
+    }
+
 }
