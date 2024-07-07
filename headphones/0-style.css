@@ -1,17 +1,4 @@
-/* Globe Styles */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    text-decoration: none;
-    list-style: none;
-}
 
-/* Base colors */
 
 :root {
     --color-text-white: #FFFFFF;
@@ -20,28 +7,26 @@
     --color-background-white: #F2F2F2
 }
 
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
 
-/* General styles */
 
 body {
-    font-family: source sans pro, sans-serif;
-    background-image: url('./Assets/headphones_hero_1.jpg');
-    height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
+    font-family: source sans pro, sans-serif;
+    background-image: url('./Assets/headphones_hero_1.jpg');
+    height: 800px;
 }
 
-img {
-    max-width: 100%;
-    object-fit: cover;
-}
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-}
 
 h1 {
     font-size: 32px;
@@ -89,25 +74,33 @@ a:active {
     color: var(--color-red);
 }
 
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
 .btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    font: 15px;
+    font-weight: 600;
     background: var(--color-red);
     color: var(--color-text-white);
-    padding: 13px 31px;
-    border: 1px solid transparent;
-    font: 14px;
-    font-weight: bold;
+    padding: 15px 30px;
+    border: 2px solid transparent;
     border-radius: 30px;
 }
 
 .btn:hover,
 .btn:active {
-    opacity: 0.9;
+    opacity: 0.7;
 }
 
-/*---------------- Hamburger menu styles------------------- */
 
 header {
     position: relative;
@@ -121,21 +114,22 @@ header {
 .hamburger {
     position: relative;
     width: 20px;
-    height: 3px;
+    height: 5px;
     background-color: var(--color-text-white);
-    border-radius: 10px;
     cursor: pointer;
+    border-radius: 10px;
     z-index: 2;
 }
 
 .hamburger::after,
 .hamburger::before {
     content: "";
-    position: absolute;
-    height: 3px;
     left: 0;
     background: var(--color-text-white);
     border-radius: 10px;
+    position: absolute;
+    height: 5px;
+   
 }
 
 .hamburger::before {
@@ -152,9 +146,9 @@ header {
     position: absolute;
     width: 25px;
     height: 100%;
-    z-index: 3;
     cursor: pointer;
     opacity: 0;
+    z-index: 3;
 }
 
 .hamburger,
@@ -182,17 +176,13 @@ header {
     left: 0;
 }
 
-
-
-/*---------------- Nav styles------------------- */
-
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1000px;
-    margin: 29px auto;
     height: 62px;
+    margin: 29px auto;
 }
 
 .menu {
@@ -214,15 +204,13 @@ nav .logo {
 }
 
 
-/*---------------- Main part styles------------------- */
-
 .main-part {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 637px;
-    height: 313px;
-    margin: 312px 187px 120px 181px;
+    width: 630px;
+    height: 315px;
+    margin: 315px 185px 120px 180px;
 
 }
 
@@ -240,25 +228,7 @@ nav .logo {
     margin: 40px 220px 65px;
 }
 
-/*----------------Media queries for tablet styles of header/hero piece------------------- */
 
-@media screen and (max-width: 768px) {
-
-    nav {
-        margin: 29px 69px 0 66px;
-
-    }
-
-    .main-part {
-        margin: 312px 65px 115px 66px;
-    }
-
-    body {
-        background-position: center;
-    }
-}
-
-/*----------------Media Queries for Phone of header/hero piece------------------- */
 
 @media screen and (max-width: 480px) {
 
@@ -275,15 +245,14 @@ nav .logo {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        position: fixed;
+        position: fixed; 
+        width: 300px;
+        height: 300px;
         top: 70px;
         left: -300px;
         background: transparent;
-        width: 300px;
-        height: 300px;
         margin: 10px auto 30px;
         transition: 0.3s ease-out;
-
     }
 
     .menu li {
@@ -296,7 +265,7 @@ nav .logo {
 
     nav {
         flex-direction: row-reverse;
-        margin-left: 21px;
+        margin-left: 20px;
     }
 
     body {
@@ -304,9 +273,9 @@ nav .logo {
     }
 
     .main-part {
-        max-width: 357px;
-        height: 436px;
-        margin: 266px auto 106px;
+        max-width: 355px;
+        height: 435px;
+        margin: 265px auto 105px;
     }
 
     .main-part h4 {
@@ -326,6 +295,20 @@ nav .logo {
     .main-part button {
         margin: 40px 70px 65px 70px;
     }
+}
 
+@media screen and (max-width: 768px) {
 
+    nav {
+        margin: 30px 70px 0 65px;
+
+    }
+
+    .main-part {
+        margin: 310px 65px 115px 65px;
+    }
+
+    body {
+        background-position: center;
+    }
 }
