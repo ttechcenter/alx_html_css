@@ -25,7 +25,7 @@
 
 body {
     font-family: source sans pro, sans-serif;
-    background-image: url('./Assets/headphones_hero_1.jpg');
+    background-image: url('./images/headphones_hero_1.jpg');
     height: 800px;
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,6 +364,23 @@ nav .logo {
     gap: 55px;
 }
 
+
+.animated-items .icon:hover {
+    animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
 .icon {
     max-width: 207px;
 }
@@ -407,7 +424,7 @@ nav .logo {
     text-align: center;
     padding: 141px 0 80px 0;
     color: var(--color-text-white);
-    background-image: url('./Assets/headphones_hero_2.jpg');
+    background-image: url('./images/headphones_hero_2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -426,47 +443,23 @@ nav .logo {
     margin: 0 auto;
 }
 
-/* .dot-image {
+.animated-dots .dot:hover {
+    animation: fade-in 1s ease-in;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.dot-image {
     max-width: 200px;
     height: 190px;
-} */
-
-/*---------------- drawing pentagon------------------- */
-
-.pentagon {
-    width: 200px;
-    height: 200px;
-    position: relative;
-}
-
-
-.pentagon::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0;
-    border-right: 50px solid transparent;
-    border-top: 110px solid var(--color-red);
-    border-left: 50px solid transparent;
-    transform: translateY(100%);
-
-}
-
-.pentagon::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-right: 100px solid transparent;
-    border-bottom: 90px solid var(--color-red);
-    border-left: 100px solid transparent;
-    transform: translateY(-100%);
-
 }
 
 .dot {
@@ -479,8 +472,6 @@ nav .logo {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    padding-top: 40px;
-    padding-bottom: 30px;
 }
 
 .dot h5 {
@@ -517,11 +508,8 @@ nav .logo {
         margin: 0 auto;
     }
 
-    .dot {
-        margin: 0 auto;
-    }
-
 }
+
 
 
 /*---------------- Task 4 - Contact Us Section------------------- */
