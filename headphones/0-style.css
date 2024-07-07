@@ -1,4 +1,4 @@
-
+/* Globe Styles */
 *,
 *::before,
 *::after {
@@ -11,12 +11,17 @@
     list-style: none;
 }
 
+/* Base colors */
+
 :root {
     --color-text-white: #FFFFFF;
     --color-red: #FF6565;
     --color-text-black: #071629;
     --color-background-white: #F2F2F2
 }
+
+
+/* General styles */
 
 body {
     font-family: source sans pro, sans-serif;
@@ -102,6 +107,8 @@ a:active {
     opacity: 0.9;
 }
 
+/*---------------- Hamburger menu styles------------------- */
+
 header {
     position: relative;
     width: 100%;
@@ -111,7 +118,7 @@ header {
     z-index: 1;
 }
 
-.BtnMenu {
+.hamburger {
     position: relative;
     width: 20px;
     height: 3px;
@@ -121,8 +128,8 @@ header {
     z-index: 2;
 }
 
-.BtnMenu::after,
-.BtnMenu::before {
+.hamburger::after,
+.hamburger::before {
     content: "";
     position: absolute;
     height: 3px;
@@ -131,12 +138,12 @@ header {
     border-radius: 10px;
 }
 
-.BtnMenu::before {
+.hamburger::before {
     top: -8px;
     width: 25px;
 }
 
-.BtnMenu::after {
+.hamburger::after {
     top: 8px;
     width: 25px;
 }
@@ -150,34 +157,36 @@ header {
     opacity: 0;
 }
 
-.BtnMenu,
+.hamburger,
 .toggle-menu {
     display: none;
 }
 
-.navigate input:checked~.BtnMenu {
+.navigation input:checked~.hamburger {
     background: transparent;
 }
 
-.navigate input:checked~.BtnMenu::before {
+.navigation input:checked~.hamburger::before {
     top: 0;
     transform: rotate(-45deg);
     width: 25px;
 }
 
-.navigate input:checked~.BtnMenu::after {
+.navigation input:checked~.hamburger::after {
     top: 0;
     transform: rotate(45deg);
     width: 25px;
 }
 
-.navigate input:checked~.menu {
+.navigation input:checked~.menu {
     left: 0;
 }
 
 
 
-.header {
+/*---------------- Nav styles------------------- */
+
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -204,6 +213,9 @@ nav .logo {
     height: 32px;
 }
 
+
+/*---------------- Main part styles------------------- */
+
 .main-part {
     display: flex;
     flex-direction: column;
@@ -228,6 +240,8 @@ nav .logo {
     margin: 40px 220px 65px;
 }
 
+/*----------------Media queries for tablet styles of header/hero piece------------------- */
+
 @media screen and (max-width: 768px) {
 
     nav {
@@ -244,6 +258,7 @@ nav .logo {
     }
 }
 
+/*----------------Media Queries for Phone of header/hero piece------------------- */
 
 @media screen and (max-width: 480px) {
 
@@ -251,7 +266,7 @@ nav .logo {
         height: 850px;
     }
 
-    .BtnMenu,
+    .hamburger,
     .toggle-menu {
         display: block;
     }
